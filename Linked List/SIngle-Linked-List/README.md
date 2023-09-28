@@ -1,1 +1,1 @@
-Check out my algorithms for singly linked list: https://drive.google.com/file/d/123a_qWrOVVHSI6TK-xjK25L5BPCp-MCo/view?usp=drive_link
+Check out my algorithms for singly linked list: [Algorithms for Singly Linked list .pdf](https://github.com/MirazAli789/Data-Structure-Algo/files/12745929/Algorithms.for.Singly.Linked.list.pdf)
