@@ -1,1 +1,1 @@
-Checkout my algorithms for circular singly linked list : https://drive.google.com/file/d/1g3DG34HKUpM_tUWLfxl70H0ue4wDmGfn/view?usp=drive_link
+Checkout my algorithms for circular singly linked list :[ALGORITHMS FOR CIRCULAR SINGLY LINKED LIST (1).pdf](https://github.com/MirazAli789/Data-Structure-Algo/files/12745926/ALGORITHMS.FOR.CIRCULAR.SINGLY.LINKED.LIST.1.pdf)
