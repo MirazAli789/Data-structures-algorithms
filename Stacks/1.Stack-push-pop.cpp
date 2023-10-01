@@ -1,71 +1,68 @@
 #include <iostream>
 using namespace std;
-#define max_size 50
-int top = -1;
-int Stack[max_size];
-void push(int data)
+class Stack
 {
-    if (top >= max_size)
+public:
+    //properties
+    int *arr;
+    int size;
+    int top;
+    //beahaviour
+    Stack(int size)
     {
-        cout << "stack is full" << endl;
+        this->size = size;
+        top = -1;
+        arr = new int(size);
     }
-    else
+    void push(int data)
     {
-        top++;
-        Stack[top] = data;
+        if (size-top>=1)
+        {
+            top++;
+            arr[top] = data;
+        }
+        else{
+            cout<<"The stack is full\n";
+        }
     }
-}
-int pop()
-{
-    if (top <= -1)
-    {
-        cout << "Stack is emty" << endl;
-        return -1;
+    void pop(){
+        if (top<=-1)
+        {
+            cout<<"Stack is empty"<<endl;
+        }
+        else{
+            top--;
+        }
     }
-    else
-    {
-        return Stack[top];
-        top--;
+    int peek(){
+        if (top<=-1)
+        {
+            cout<<"Stack is empty"<<endl;
+        }
+        else{
+            return arr[top];
+        }
     }
-}
-int peek()
-{
-    if (top <= -1)
-    {
-        cout << "Stack is empty" << endl;
-        return -1;
+    bool isempty(){
+        if (top<=-1)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
-    else
-    {
-        return Stack[top];
-    }
-}
-void print_stack(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-}
+};
 int main()
 {
-    int n, data, popped, peeked;
-    cout << "Enter the number of elements of the stack"
-         << endl;
-    cin >> n;
-    for (int i = 0; i < n; i++)
-    {
-        cout << "Enter element" << i + 1 << ": ";
-        cin >> data;
-        push(data);
-    }
-    cout << "The stack is\n";
-    print_stack(Stack, n);
-    peeked = peek();
-    cout << "The peek element is: " << peeked << endl;
-    popped = pop();
-    cout << "The popped element is: " << popped << endl;
-
+    Stack st(5);
+    st.push(3);
+    st.push(4);
+    st.push(5);
+    cout<<"Peek element = "<<st.peek()<<endl;
+    st.pop();
+    cout<<"Peek element = "<<st.peek()<<endl;
+    
+    cout<<st.isempty();
     return 0;
 }
