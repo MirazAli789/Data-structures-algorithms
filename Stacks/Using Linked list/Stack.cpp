@@ -15,7 +15,7 @@ public:
 
     void push(int d)
     {
-        Stack *n1 = new Stack; // As stack is implemented using linked list, we need not worry about stack overflowing.
+        Stack *n1 = new Stack; // As stack is implemented using linked list, we need not to worry about stack overflowing.
         n1->data = d;
         n1->next = top;
         top = n1;
